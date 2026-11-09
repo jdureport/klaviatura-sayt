@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Özbek klaviatura — yangi alifbo uçun Android klaviaturasi</title>
+<meta name="description" content="Özbek tilining 2026-yilgi lotin alifbosi uçun Android klaviaturasi: 28 harf va ʼ, T9, qoraqalpoqça, inglizça va rusça, söz takliflari.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 108 108'%3E%3Crect width='108' height='108' rx='24' fill='%230E7C86'/%3E%3Ccircle cx='54' cy='59' r='13' fill='none' stroke='white' stroke-width='7'/%3E%3Ccircle cx='47' cy='36' r='4.5' fill='white'/%3E%3Ccircle cx='61' cy='36' r='4.5' fill='white'/%3E%3C/svg%3E">
+<style>
+  :root {
+    --firuza: #0E7C86; --firuza-2: #23A3AE; --bg: #ffffff; --soft: #EEF6F7; --text: #1a1c20;
+    --muted: #5e646e; --key: #ffffff; --kb: #E6E8EC; --special: #C8CDD5; --shadow: #A9AFB8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #141517; --soft: #1d2023; --text: #f1f2f4; --muted: #9095a0;
+            --key: #33353A; --kb: #17181B; --special: #24262A; --shadow: #0C0D0F; --firuza: #23A3AE; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+         color: var(--text); background: var(--bg); line-height: 1.55; }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+  header { padding: 28px 0 0; }
+  .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 18px; }
+  .brand svg { width: 40px; height: 40px; }
+  .hero { display: grid; grid-template-columns: 1.05fr 1fr; gap: 48px; align-items: center; padding: 56px 0 64px; }
+  h1 { font-size: clamp(34px, 5.4vw, 56px); line-height: 1.05; letter-spacing: -0.02em; margin: 0 0 18px; }
+  h1 em { font-style: normal; color: var(--firuza); }
+  .lead { font-size: 19px; color: var(--muted); margin: 0 0 28px; max-width: 34ch; }
+  .badge { display: inline-flex; align-items: center; gap: 10px; padding: 12px 18px; border-radius: 999px;
+           background: var(--soft); color: var(--text); font-weight: 600; font-size: 15px; }
+  .badge::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--firuza); }
+  /* klaviatura */
+  .kb { background: var(--kb); border-radius: 22px; padding: 14px 8px 12px; box-shadow: 0 24px 60px -24px rgba(14,124,134,.45); }
+  .row { display: flex; justify-content: center; gap: 5px; margin-bottom: 8px; }
+  .row:last-child { margin-bottom: 0; }
+  .k { flex: 1 1 0; max-width: 40px; height: 46px; border-radius: 7px; background: var(--key);
+       box-shadow: 0 1.5px 0 var(--shadow); display: grid; place-items: center; font-size: 19px; }
+  .k.new { color: var(--firuza); font-weight: 700; }
+  .k.s { background: var(--special); max-width: 58px; flex-grow: 1.5; font-size: 14px; }
+  .k.sp { max-width: none; flex-grow: 5.5; font-size: 13px; color: var(--muted); }
+  .k.ent { background: var(--firuza); color: #fff; max-width: 76px; flex-grow: 2; }
+  .k.kh { max-width: 50px; flex-grow: 1.25; }
+  .caption { text-align: center; color: var(--muted); font-size: 14px; margin-top: 14px; }
+  /* imkoniyatlar */
+  section.f { padding: 24px 0 72px; }
+  section.f h2 { font-size: 28px; margin: 0 0 24px; letter-spacing: -0.01em; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .card { background: var(--soft); border-radius: 18px; padding: 22px; }
+  .card b { display: block; font-size: 17px; margin-bottom: 6px; }
+  .card span { color: var(--muted); font-size: 15px; }
+  footer { border-top: 1px solid color-mix(in srgb, var(--muted) 25%, transparent); padding: 28px 0 40px;
+           color: var(--muted); font-size: 14px; display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
+  a { color: var(--firuza); }
+  @media (max-width: 760px) {
+    .hero { grid-template-columns: 1fr; gap: 32px; padding: 36px 0 48px; }
+    .grid { grid-template-columns: 1fr; }
+    .k { height: 42px; font-size: 17px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <svg viewBox="0 0 108 108" aria-hidden="true"><rect width="108" height="108" rx="24" fill="#0E7C86"/><circle cx="54" cy="59" r="13" fill="none" stroke="#fff" stroke-width="7"/><circle cx="47" cy="36" r="4.5" fill="#fff"/><circle cx="61" cy="36" r="4.5" fill="#fff"/></svg>
+      Özbek klaviatura
+    </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div>
+        <h1>Yangi alifboda <em>bemalol</em> yozing</h1>
+        <p class="lead">Özbek tilining 2026-yilgi lotin alifbosi uçun Android klaviaturasi. ö, ğ, ş, ç va ʼ — alohida tugmalarda.</p>
+        <span class="badge">Tez orada Google Play'da</span>
+      </div>
+      <div>
+        <div class="kb" role="img" aria-label="Klaviatura joylaşuvi: q ş e r t y u i o ö p; a s d f g ğ h j k l; z x ç v b n m ʼ">
+          <div class="row"><div class="k">q</div><div class="k new">ş</div><div class="k">e</div><div class="k">r</div><div class="k">t</div><div class="k">y</div><div class="k">u</div><div class="k">i</div><div class="k">o</div><div class="k new">ö</div><div class="k">p</div></div>
+          <div class="row"><div class="k">a</div><div class="k">s</div><div class="k">d</div><div class="k">f</div><div class="k">g</div><div class="k new">ğ</div><div class="k">h</div><div class="k">j</div><div class="k">k</div><div class="k">l</div></div>
+          <div class="row"><div class="k s">⇧</div><div class="k">z</div><div class="k">x</div><div class="k new">ç</div><div class="k">v</div><div class="k">b</div><div class="k">n</div><div class="k">m</div><div class="k new">ʼ</div><div class="k s">⌫</div></div>
+          <div class="row"><div class="k s kh">?123</div><div class="k s">🌐</div><div class="k">,</div><div class="k sp">Özbek</div><div class="k">.</div><div class="k ent">↵</div></div>
+        </div>
+        <p class="caption">28 harf va ʼ belgisi — hammasi bir qaraşda</p>
+      </div>
+    </div>
+
+    <section class="f">
+      <h2>Imkoniyatlar</h2>
+      <div class="grid">
+        <div class="card"><b>Yangi alifbo</b><span>2026-yilgi qonunga mos 28 harf va ʼ. Eslab qoliş oson: ö — o yonida, ğ — g yonida, ç — c örnida.</span></div>
+        <div class="card"><b>5 til</b><span>Özbekça, özbekça T9, qoraqalpoqça, inglizça va rusça. Ular orasida 🌐 tugmasi bilan ötasiz.</span></div>
+        <div class="card"><b>Söz takliflari</b><span>Yozayotganingizda mos sözlarni taklif qiladi va siz köp yozadigan sözlarni eslab qoladi.</span></div>
+        <div class="card"><b>T9</b><span>12 tugmali klaviaturada har harf uçun bir marta bosasiz, söz luğatdan özi topiladi.</span></div>
+        <div class="card"><b>Maxfiylik</b><span>Ilovada internet ruxsati yöq. Siz yozgan matn telefoningizdan çiqmaydi.</span></div>
+        <div class="card"><b>Yoruğ va qorönği</b><span>Klaviatura telefoningiz mavzusiga qarab yoruğ yoki qorönği körinişga ötadi.</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2026 Özbekiston volontyorlari assotsiatsiyasi</span>
+    <a href="/maxfiylik/">Maxfiylik siyosati · Privacy Policy</a>
+  </footer>
+</div>
+</body>
+</html>
