@@ -40,6 +40,9 @@
   .k.sp { max-width: none; flex-grow: 5.5; font-size: 13px; color: var(--muted); }
   .k.ent { background: var(--firuza); color: #fff; max-width: 76px; flex-grow: 2; }
   .k.kh { max-width: 50px; flex-grow: 1.25; }
+  .row.num .k { height: 38px; font-size: 16px; }
+  .k.w { max-width: 44px; flex-grow: 1.1; }
+  .k.pill { border-radius: 999px; }
   .caption { text-align: center; color: var(--muted); font-size: 14px; margin-top: 14px; }
   /* imkoniyatlar */
   section.f { padding: 24px 0 72px; }
@@ -75,11 +78,12 @@
         <span class="badge">Tez orada Google Play'da</span>
       </div>
       <div>
-        <div class="kb" role="img" aria-label="Klaviatura joylaşuvi: q ş e r t y u i o ö p; a s d f g ğ h j k l; z x ç v b n m ʼ">
-          <div class="row"><div class="k">q</div><div class="k new">ş</div><div class="k">e</div><div class="k">r</div><div class="k">t</div><div class="k">y</div><div class="k">u</div><div class="k">i</div><div class="k">o</div><div class="k new">ö</div><div class="k">p</div></div>
-          <div class="row"><div class="k">a</div><div class="k">s</div><div class="k">d</div><div class="k">f</div><div class="k">g</div><div class="k new">ğ</div><div class="k">h</div><div class="k">j</div><div class="k">k</div><div class="k">l</div></div>
+        <div class="kb" role="img" aria-label="Klaviatura joylaşuvi: 1 2 3 4 5 6 7 8 9 0; q e r t y u i o ö p; a s ş d f g ğ h j k l; z x ç v b n m ʼ">
+          <div class="row num"><div class="k">1</div><div class="k">2</div><div class="k">3</div><div class="k">4</div><div class="k">5</div><div class="k">6</div><div class="k">7</div><div class="k">8</div><div class="k">9</div><div class="k">0</div></div>
+          <div class="row"><div class="k w">q</div><div class="k w">e</div><div class="k w">r</div><div class="k w">t</div><div class="k w">y</div><div class="k w">u</div><div class="k w">i</div><div class="k w">o</div><div class="k w new">ö</div><div class="k w">p</div></div>
+          <div class="row"><div class="k">a</div><div class="k">s</div><div class="k new">ş</div><div class="k">d</div><div class="k">f</div><div class="k">g</div><div class="k new">ğ</div><div class="k">h</div><div class="k">j</div><div class="k">k</div><div class="k">l</div></div>
           <div class="row"><div class="k s">⇧</div><div class="k">z</div><div class="k">x</div><div class="k new">ç</div><div class="k">v</div><div class="k">b</div><div class="k">n</div><div class="k">m</div><div class="k new">ʼ</div><div class="k s">⌫</div></div>
-          <div class="row"><div class="k s kh">?123</div><div class="k s">🌐</div><div class="k">,</div><div class="k sp">Özbek</div><div class="k">.</div><div class="k ent">↵</div></div>
+          <div class="row"><div class="k s kh pill">123</div><div class="k s">😊</div><div class="k">,</div><div class="k sp">◂ Özbek ▸</div><div class="k">.</div><div class="k ent pill">↵</div></div>
         </div>
         <p class="caption">28 harf va ʼ belgisi — hammasi bir qaraşda</p>
       </div>
@@ -88,12 +92,12 @@
     <section class="f">
       <h2>Imkoniyatlar</h2>
       <div class="grid">
-        <div class="card"><b>Yangi alifbo</b><span>2026-yilgi qonunga mos 28 harf va ʼ. Eslab qoliş oson: ö — o yonida, ğ — g yonida, ç — c örnida.</span></div>
-        <div class="card"><b>5 til</b><span>Özbekça, özbekça T9, qoraqalpoqça, inglizça va rusça. Ular orasida 🌐 tugmasi bilan ötasiz.</span></div>
+        <div class="card"><b>Yangi alifbo</b><span>2026-yilgi qonunga mos 28 harf va ʼ. Eslab qoliş oson: ş — s yonida, ğ — g yonida, ö — o yonida.</span></div>
+        <div class="card"><b>5 til</b><span>Özbekça, özbekça T9, qoraqalpoqça, inglizça va rusça. Tilni böş joyni surib almaştirasiz.</span></div>
         <div class="card"><b>Söz takliflari</b><span>Yozayotganingizda mos sözlarni taklif qiladi va siz köp yozadigan sözlarni eslab qoladi.</span></div>
         <div class="card"><b>T9</b><span>12 tugmali klaviaturada har harf uçun bir marta bosasiz, söz luğatdan özi topiladi.</span></div>
         <div class="card"><b>Maxfiylik</b><span>Ilovada internet ruxsati yöq. Siz yozgan matn telefoningizdan çiqmaydi.</span></div>
-        <div class="card"><b>Yoruğ va qorönği</b><span>Klaviatura telefoningiz mavzusiga qarab yoruğ yoki qorönği körinişga ötadi.</span></div>
+        <div class="card"><b>Sizga moslab</b><span>Mavzular, ranglar, balandlik va harf joylarini özingiz tanlaysiz. Emojilar ham bor 😊</span></div>
       </div>
     </section>
   </main>
